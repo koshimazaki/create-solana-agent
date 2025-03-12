@@ -4,7 +4,7 @@
   "description": "Get up and running with AI Agents on Solana powered by Solana Agent Kit",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/bin/index.ts",
+    "dev": "npx tsx src/bin/index.ts",
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc && chmod +x dist/bin/index.js",
     "prepare": "npm run build"
@@ -32,7 +32,9 @@
     "@types/node": "^22.10.2",
     "eslint": "^9.17.0",
     "prettier": "^3.4.2",
-    "typescript": "^5.7.2"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
   },
   "dependencies": {
     "@clack/prompts": "^0.9.0",

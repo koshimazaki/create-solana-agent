@@ -1,14 +1,19 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "ES2022",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "strict": true,
-      "skipLibCheck": true,
-      "outDir": "./dist"
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "tmp", "dist"]
-  }
+  "compilerOptions": {
+    "target": "ES2022",           // Or your preferred target
+    "module": "NodeNext",         // Updated to NodeNext for better ESM support
+    "moduleResolution": "NodeNext", // Updated for ESM
+    "esModuleInterop": true,      // For compatibility with CommonJS modules
+    "resolveJsonModule": true,    // If you import JSON files
+    "strict": true,               // Recommended for type safety
+    "skipLibCheck": true,         // Speeds up compilation
+    "outDir": "./dist",           // Output directory for compiled JS
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "esm": true,                   // Enable ESM support for ts-node
+    "experimentalSpecifierResolution": "node" // Help resolve imports without extensions
+  },
+  "include": ["src/**/*"],        // Include all TypeScript files in src
+  "exclude": ["node_modules", "dist"]  // Exclude these directories
+}
